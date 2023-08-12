@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    tty: true
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/home/echo-hot-reload-test
+    command:
+      - air
